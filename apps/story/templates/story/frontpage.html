@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1 class="display-4">Welcome to coding news!</h1>
+
+        {% for story in stories %}
+            <a href="{{ story.url }}">{{ story.title }}</a>
+            <p>{{ story.score }} points by {{ story.by }}</p>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
